@@ -1,0 +1,97 @@
+:root {
+    --color-theme-1: #18503c;
+    --color-theme-2: #0a1835;
+    --hue-teal: #037171;
+    --hue-sea: #00b9ae;
+    --hue-mint: #00ffbd;
+    --hue-cyan: #00fdff;
+    --hue-darkgreen: #102e28;
+}
+/*FONTS*/
+
+.font-1 {
+    font-family: "Cal Sans", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+.font-2 {
+    font-family: "MuseoModerno", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+}
+.font-3 {
+    font-family: "Khand", sans-serif;
+    font-style: normal;
+}
+.font-4 {
+    font-family: "Cute Font", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.font-5 {
+    font-family: "Vina Sans", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.font-6 {
+    font-family: "Fugaz One", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.font-7 {
+    font-family: "Capriola", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.font-8 {
+    font-family: "Gowun Dodum", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+section {
+    margin-top: 3em;
+}
+
+.anim-title-wrapper {
+    position: relative;
+    display: flex;
+    align-items: baseline;
+}
+.anim-title-txt:nth-child(1) {
+    color: var(--hue-cyan);
+}
+.anim-title-txt:nth-child(2) {
+    color: var(--hue-mint);
+    position: absolute;
+    top: 0;
+    animation: AnimTitle 10s ease-in-out infinite;
+}
+
+@keyframes AnimTitle {
+    0% {
+        opacity: 0;
+        clip-path: polygon(0% 0%, 1% 0%, 1% 100%, 0% 100%);
+    }
+    30%,
+    70% {
+        clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%);
+    }
+    20% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+        clip-path: polygon(100% 0%, 100% 0%, 100% 100%, 100% 100%);
+    }
+}
+.navbar {
+    padding: 0;
+    padding-top: 3em;
+    border-top: 5pt solid var(--hue-teal);
+    background-color: var(--hue-darkgreen);
+}
