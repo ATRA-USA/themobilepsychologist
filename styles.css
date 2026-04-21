@@ -59,7 +59,7 @@ p,
 span,
 section {
     transition: all 1s;
-    font-color: white;
+    color: white;
 }
 
 body {
