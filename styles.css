@@ -59,9 +59,13 @@ p,
 span,
 section {
     transition: all 1s;
+}
+p {
     color: white;
 }
-
+html {
+    min-height: 100%;
+}
 body {
     background-image: linear-gradient(#001712, var(--hue-darkgreen));
 }
