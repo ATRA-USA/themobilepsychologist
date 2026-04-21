@@ -1,14 +1,14 @@
+/*ROOT THEMES*/
 :root {
     --color-theme-1: #18503c;
     --color-theme-2: #0a1835;
     --hue-teal: #037171;
     --hue-sea: #00b9ae;
-    --hue-mint: #00ffbd;
-    --hue-cyan: #00fdff;
+    --hue-mint: #00ffa9;
+    --hue-cyan: #00ffe4;
     --hue-darkgreen: #102e28;
 }
 /*FONTS*/
-
 .font-1 {
     font-family: "Cal Sans", sans-serif;
     font-weight: 400;
@@ -52,46 +52,84 @@
     font-weight: 400;
     font-style: normal;
 }
-
+/*GENERAL MISC.*/
+div,
+a,
+p,
+span,
 section {
-    margin-top: 3em;
+    transition: all 1s;
 }
 
-.anim-title-wrapper {
+body {
+    background-image: linear-gradient(#001712, var(--hue-darkgreen));
+}
+section {
+    margin-top: 6em;
+    margin-bottom: 2em;
+    padding: 5em;
+    min-height: 30vh !important;
+    background-color: rgba(0, 0, 0, 0.1);
+    border-radius: 2em;
+}
+html {
+    scroll-behavior: smooth;
+}
+/*HOME PAGE*/
+
+.mobile-psych-wrapper {
     position: relative;
     display: flex;
     align-items: baseline;
 }
-.anim-title-txt:nth-child(1) {
+.mobile-psych-txt:nth-child(1) {
     color: var(--hue-cyan);
 }
-.anim-title-txt:nth-child(2) {
+.mobile-psych-txt:nth-child(2) {
     color: var(--hue-mint);
     position: absolute;
     top: 0;
-    animation: AnimTitle 10s ease-in-out infinite;
+    animation: MobilePsychAnim1 5s ease-out infinite alternate;
+    animation-delay: 3s;
+    opacity: 0;
 }
-
-@keyframes AnimTitle {
+@keyframes MobilePsychAnim1 {
     0% {
         opacity: 0;
         clip-path: polygon(0% 0%, 1% 0%, 1% 100%, 0% 100%);
     }
-    30%,
+    50% {
+        opacity: 1;
+    }
+    40%,
     70% {
         clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%);
     }
-    20% {
-        opacity: 1;
-    }
+
     100% {
         opacity: 0;
         clip-path: polygon(100% 0%, 100% 0%, 100% 100%, 100% 100%);
     }
 }
+.mobile-psych-txt span {
+    animation: MobilePsychAnim2 1s ease-in;
+}
+@keyframes MobilePsychAnim2 {
+    0% {
+        opacity: 0;
+        filter: blur(0.1em);
+    }
+    50% {
+        filter: blur(0);
+    }
+    60% {
+        filter: blur(0.01em);
+    }
+}
+
 .navbar {
     padding: 0;
-    padding-top: 3em;
-    border-top: 5pt solid var(--hue-teal);
+    padding-top: 2em;
     background-color: var(--hue-darkgreen);
+    box-shadow: 0 1px 10px rgba(0, 0, 0, 0.3);
 }
